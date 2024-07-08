@@ -2,7 +2,6 @@ package com.ilcarro.stepDefinitions;
 
 import com.ilcarro.pages.AddCarPage;
 import com.ilcarro.pages.HomePage;
-import com.ilcarro.pages.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
@@ -20,18 +19,19 @@ public class AddCarPageSteps {
         new AddCarPage(driver).selectLocation();
     }
 
-//    @And("User fills out the car details form with valid data")
-//    public void enter_valid_carData() {
-//        new AddCarPage(driver).enterCarData("","");
-//    }
-//
-//    @And("User clicks on the submit button")
-//    public void click_on_submit_button() {
-//        new AddCarPage(driver).clickOnSubmitButton();
-//    }
-//
-//    @Then("User verifies Success Message is displayed")
-//    public void verify_Success_Message() {
-//        new AddCarPage(driver).isMessageTextPresent("");
-//    }
+    @And("User fills out the car details form with valid data")
+    public void enter_valid_carData() {
+        new AddCarPage(driver).enterCarData("VW", "Passat", "2010",
+                "5", "C", "12345", "100").selectFuel("Petrol");
+    }
+
+    @And("User clicks on the submit button")
+    public void click_on_submit_button() {
+        new AddCarPage(driver).clickOnSubmitButton();
+    }
+
+    @Then("User verifies Add Car Message is displayed")
+    public void verify_Add_Car_Message() {
+        new AddCarPage(driver).isMessageTextPresent("Car added");
+    }
 }

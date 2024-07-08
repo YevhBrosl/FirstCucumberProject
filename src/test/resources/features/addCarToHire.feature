@@ -11,7 +11,7 @@ Feature: Add Car
     And User clicks on the Ok button
     And User clicks on the Let the car work link
     And User selects the location
-#    And User fills out the car details form with valid data
-#    And User clicks on the submit button
-#    Then User verifies Success Message is displayed
-#    And User quits browser
+    And User fills out the car details form with valid data
+    And User clicks on the submit button
+    Then User verifies Add Car Message is displayed
+    And User quits browser
