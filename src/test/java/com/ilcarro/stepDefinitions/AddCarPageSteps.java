@@ -22,7 +22,7 @@ public class AddCarPageSteps {
     @And("User fills out the car details form with valid data")
     public void enter_valid_carData() {
         new AddCarPage(driver).enterCarData("VW", "Passat", "2010",
-                "5", "C", "12345", "100").selectFuel("Petrol");
+                "5", "C", "98765", "100").selectFuel("Petrol");
     }
 
     @And("User clicks on the submit button")

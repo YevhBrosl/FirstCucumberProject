@@ -16,7 +16,8 @@ public class AddCarPage extends BasePage{
 
     public AddCarPage selectLocation() {
         click(location);
-        location.sendKeys("Haif");
+        location.sendKeys("Haifa");
+        pause(1000);
         location.sendKeys(Keys.DOWN, Keys.ENTER);
         return this;
     }

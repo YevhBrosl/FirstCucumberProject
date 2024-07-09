@@ -29,8 +29,8 @@ public class HomePage extends BasePage{
     WebElement letTheCarWorkLink;
 
     public AddCarPage clickOnLetTheCarWorkLink() {
-        click(letTheCarWorkLink);
         pause(2000);
+        click(letTheCarWorkLink);
         return new AddCarPage(driver);
     }
 }
